@@ -1,6 +1,6 @@
 # My First Python Script
 
-It's a chatbot API wrapper, it uses Gemini API.
+It's a chatbot API wrapper, it uses Gemini API and MAY contain memory eventually after more commits occur.
 
 # Usage
 
