@@ -21,7 +21,8 @@ while True:
     if prompt == "quit":
         clear()
         break
-
+    
+    print("Gemini is thinking...")
     response = chat.send_message(prompt)
 
     now = datetime.now()
