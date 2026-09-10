@@ -13,6 +13,7 @@ load_dotenv()
 api = os.getenv("GEMINI_API_1")
 
 client = genai.Client(api_key=api)
+chat = client.chats.create(model="gemini-3.1-flash-lite")
 
 while True:
     prompt = input("Chat: ")
@@ -21,10 +22,7 @@ while True:
         clear()
         break
 
-    response = client.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=prompt
-    )
+    response = chat.send_message(prompt)
 
     now = datetime.now()
     formatted = now.strftime("%Y-%m-%d %H:%M:%S")
