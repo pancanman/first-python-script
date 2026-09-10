@@ -13,7 +13,10 @@ load_dotenv()
 api = os.getenv("GEMINI_API_1")
 
 client = genai.Client(api_key=api)
-chat = client.chats.create(model="gemini-3.1-flash-lite")
+
+modelchoice = input("Type a model (ex gemini-3.1-flash-lite): gemini-")
+
+chat = client.chats.create(model=f"gemini-{modelchoice}")
 
 while True:
     prompt = input("Chat: ")
