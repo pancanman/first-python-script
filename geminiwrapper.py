@@ -14,7 +14,7 @@ modelchoice = input("Type a model (ex gemini-3.1-flash-lite): gemini-")
 
 chat = client.chats.create(model=f"gemini-{modelchoice}")
 
-with open("memory.txt", "w", encoding="utf-8") as file:
+with open("memory.txt", "a", encoding="utf-8") as file:
     file.write("New Chat")
 
 while True:
